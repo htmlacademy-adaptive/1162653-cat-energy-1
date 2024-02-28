@@ -1,0 +1,122 @@
+@mixin form-style {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@mixin form-paragraph-style {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+@mixin form-title-style {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+@mixin form-label-style {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-right: 16px;
+}
+
+@mixin form-list-style {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 13px;
+}
+
+@mixin form-input-style {
+  margin: 0;
+}
+
+.form__about {
+  @include form-style;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 14px;
+  margin-bottom: 46px;
+}
+
+.form__about-group {
+  @include form-paragraph-style;
+}
+
+.form__about-label {
+  @include form-label-style;
+}
+
+.form__goal {
+  @include form-style;
+  margin-bottom: 45px;
+}
+
+.form__goal-list {
+  @include form-list-style;
+}
+
+.form__goal-control-label {
+  @include form-label-style;
+  padding-left: 45px;
+}
+
+.form__contacts {
+  @include form-style;
+  margin-bottom: 24px;
+}
+
+.form__contacts-title {
+  @include form-title-style;
+  margin-bottom: 35px;
+}
+
+.form__contacts-group {
+  @include form-paragraph-style;
+  margin-bottom: 14px;
+}
+
+.form__contacts-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.form__contacts-label {
+  @include form-label-style;
+}
+
+.form__comment {
+  @include form-style;
+  margin-bottom: 23px;
+}
+
+.form__comment-title {
+  @include form-title-style;
+  margin-bottom: 38px;
+}
+
+.form__extra {
+  @include form-style;
+  margin-bottom: 34px;
+}
+
+.form__extra-title {
+  @include form-title-style;
+  margin-bottom: 34px;
+}
+
+.form__extra-list {
+  @include form-list-style;
+}
+
+.form__extra-control-label {
+  @include form-label-style;
+  padding-left: 41px;
+}
