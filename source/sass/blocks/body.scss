@@ -1,0 +1,19 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: $background-base;
+  color: $font-color-secondary;
+}
+
+.body__container {
+  margin: 0 auto;
+}
+
+.body__header {
+  margin: 0 auto;
+  margin-top: 13px;
+}

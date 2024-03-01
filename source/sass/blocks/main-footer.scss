@@ -1,0 +1,13 @@
+.main-footer {
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 280px;
+  gap: 40px;
+  background: $background-secondary;
+  justify-content: center;
+}
+
+.main-footer__logo {
+  justify-self: center;
+}
