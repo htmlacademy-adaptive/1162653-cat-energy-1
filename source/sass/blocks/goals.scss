@@ -1,5 +1,5 @@
 .goals {
-  background-color: #ffffff;
+  background-color: $background-base;
 }
 
 .goals__list {
@@ -15,30 +15,31 @@
 .goals__item {
   padding: 24px 33px 18px 20px;
   box-sizing: border-box;
-  background-color: #f2f2f2;
-  color: #444444;
+  background-color: $background-secondary;
+  color: $font-color-secondary;
 }
 
 .goals__title {
   margin: 0;
   padding-left: 91px;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-family-secondary;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
   text-transform: uppercase;
-  color: #000000;
+  color: $font-color-base;
 }
 
 .goals__text {
   margin: 0;
   margin-top: 29px;
+  color: $font-color-secondary;
 }
 
 .goals__to-catalog {
   margin: 0;
   margin-top: 38px;
-  color: #000000;
+  color: $font-color-base;
   text-align: center;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;

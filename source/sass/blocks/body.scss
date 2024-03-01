@@ -1,13 +1,16 @@
 .body {
-  width: 320px; // Не уверена, что данная настройка корректная, хочется прописать этот параметр временно, пока задается базовая стилистика
   display: flex;
   flex-direction: column;
   min-height: 100%;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  background-color: #ffffff;
-  color: #444444;
+  background-color: $background-base;
+  color: $font-color-secondary;
+}
+
+.body__container {
+  margin: 0 auto;
 }
 
 .body__header {

@@ -1,8 +1,11 @@
 // Начните писать стили здесь
+@import "./blocks/fonts.scss";
+@import "./blocks/variables.scss";
 @import "./blocks/visually-hidden.scss";
 @import "./blocks/button.scss";
 @import "./blocks/page.scss";
 @import "./blocks/body.scss";
+@import "./blocks/page-container.scss";
 @import "./blocks/main-container.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/header-logos.scss";

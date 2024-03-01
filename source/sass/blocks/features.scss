@@ -1,6 +1,6 @@
 .features {
   color: #ffffff;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-family-secondary;
 }
 
 .features__wrapper {
@@ -43,7 +43,7 @@
 .features__to-form {
   padding: 10px 44px;
   color: #ffffff;
-  background: #68b738;
+  background: $background-branded;
   text-align: center;
   font-family: inherit;
   font-size: 16px;
