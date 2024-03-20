@@ -1,4 +1,5 @@
 .main-footer {
+  width: 100%;
   padding: 40px 20px;
   box-sizing: border-box;
   display: grid;
@@ -6,8 +7,42 @@
   gap: 40px;
   background: $background-secondary;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 66px 110px;
+  }
 }
 
 .main-footer__logo {
   justify-self: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 160px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 416px;
+  }
+}
+
+.main-footer__social {
+  @media (min-width: $tablet-width) {
+    margin-right: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 376px;
+  }
+}
+
+.copyright__logo + .copyright__logo {
+  @media (min-width: $tablet-width) {
+    margin-left: 23px;
+  }
 }

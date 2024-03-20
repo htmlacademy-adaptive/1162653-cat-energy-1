@@ -1,3 +1,17 @@
+.form__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .form__about {
   margin: 0;
   padding: 0;
@@ -6,6 +20,10 @@
   grid-template-columns: auto;
   gap: 14px;
   margin-bottom: 46px;
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
 }
 
 .form__about-group {
@@ -28,6 +46,10 @@
   padding: 0;
   border: none;
   margin-bottom: 45px;
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
 }
 
 .form__goal-list {
@@ -53,6 +75,11 @@
   padding: 0;
   border: none;
   margin-bottom: 24px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form__contacts-title {
@@ -103,6 +130,10 @@
   padding: 0;
   border: none;
   margin-bottom: 34px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .form__extra-title {
@@ -120,6 +151,17 @@
   display: grid;
   grid-template-columns: auto;
   gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 123px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form__extra-control-label {
