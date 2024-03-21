@@ -1,6 +1,18 @@
 .selection {
+  width: 320px;
   padding: 27px 20px 32px;
   font-family: $font-family-secondary;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 698px;
+    padding: 65px 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding: 74px 0 79px;
+  }
 }
 
 .selection__title {
@@ -10,6 +22,16 @@
   font-size: 36px;
   line-height: 36px;
   color: $font-color-base;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .selection__subtitle {
@@ -17,6 +39,13 @@
   margin-bottom: 39px;
   color: $font-color-base;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+    width: 323px;
+  }
 }
 
 .selection__send {

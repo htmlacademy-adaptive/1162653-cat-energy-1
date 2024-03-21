@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: форма подбора питания Кэт Энерджи</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
@@ -55,7 +56,7 @@
           программу питания для вашего кота</p>
 
         <form class="selection__form form" action="https://echo.htmlacademy.ru/" method="post">
-
+          <div class="form__wrapper">
           <fieldset class="form__about">
             <!-- Информация о коте -->
             <legend class="visually-hidden">Информация о коте</legend>
@@ -105,6 +106,7 @@
               </li>
             </ul>
           </fieldset>
+        </div>
 
           <fieldset class="form__contacts">
             <!-- Контакты владельца -->
@@ -171,10 +173,10 @@
               </li>
             </ul>
           </fieldset>
-
+          <div class="form__container">
           <button class="selection__send button" type="submit">отправить заявку</button>
           <p class="selection__warning">* — Обязательные поля</p>
-
+        </div>
         </form>
       </div>
     </section>
