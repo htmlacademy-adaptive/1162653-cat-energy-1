@@ -1,25 +1,52 @@
 .main-header {
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-
-  @media (min-width: $tablet-width) {
-    width: 704px;
-    flex-direction: row;
-    justify-content: space-between;
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/features-desktop.jpg"),
+      linear-gradient(90deg, #ffffff 50%, #64a83b 50%);
+    background-position: calc(50% + 360px) center, center;
+    background-repeat: no-repeat;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 1220px;
+  &--inner {
+    background-image: none;
   }
 }
 
 .main-header__wrapper {
-  margin: 0 20px;
+  @media (min-width: $tablet-width) {
+    width: 704px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 34px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
+.main-header__logo {
+  position: relative;
+  width: 280px;
+  display: flex;
+  margin: 0 auto;
+  padding: 13px 20px 15px;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
+    width: 174px;
     margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
   }
 }
 
@@ -46,8 +73,15 @@
   }
 }
 
-.main-header__toggle {
+.main-header__features {
+  margin: 0 auto;
+
   @media (min-width: $tablet-width) {
-    display: none;
+    padding-left: 30px;
+    padding-right: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
   }
 }

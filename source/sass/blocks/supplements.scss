@@ -1,5 +1,5 @@
 .supplements {
-  width: 280px;
+  width: 320px;
 
   @media (min-width: $tablet-width) {
     width: 708px;
@@ -11,10 +11,21 @@
 }
 
 .supplements__list {
+  width: 280px;
   list-style-type: none;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
   display: grid;
+
+  @media (min-width: $tablet-width) {
+    width: 632px;
+    padding: 0 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 896px;
+    padding: 0;
+  }
 }
 
 .supplements__item {
@@ -41,6 +52,7 @@
   margin: 0;
   margin-top: 26px;
   margin-bottom: 36px;
+  padding-left: 20px;
   font-size: 24px;
   line-height: 24px;
 
@@ -49,11 +61,13 @@
     line-height: 36px;
     margin-top: 70px;
     margin-bottom: 80px;
+    padding-left: 40px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1220px;
     margin-top: 76px;
+    padding-left: 0;
   }
 }
 

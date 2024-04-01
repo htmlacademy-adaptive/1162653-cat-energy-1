@@ -12,21 +12,18 @@
 
 <body class="body page__body">
 
-  <div class="page-container body__container">
-
   <header class="main-header body__header">
     <!-- Хедер сайта -->
-    <div class="main-header__wrapper header-logos">
+    <div class="main-header__wrapper">
     <a class="main-header__logo">
       <!-- Блок с логотипами -->
       <img class="main-header__logo-image" src="img/cat-logo.svg" width="33" height="38"
         alt="Функциональное питание для котов.">
       <img class="main-header__logo-text" src="img/text-logo.svg" width="101" height="18" alt="Cat Energy.">
     </a>
-    <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-  </div>
     <nav class="main-navigation">
       <!-- Блок с главным меню -->
+      <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-navigation__list site-list">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link">
@@ -45,23 +42,24 @@
           </li>
         </ul>
     </nav>
-  </header>
-
-  <main class="main-container body__main">
-    <!-- Основное содержание главной страницы сайта -->
-    <section class="features main-container__features">
+      </div>
+    <section class="features main-header__features">
       <!-- Первый экран сайта  -->
       <div class="features__wrapper">
         <div class="features__text-wrapper">
         <h1 class="features__title">Функциональное питание для котов</h1>
         <p class="features__description">Занялся собой? Займись котом!</p>
-        <a class="features__to-form button" href="form.html">подобрать программу</a>
       </div>
+      <a class="features__to-form button" href="form.html">подобрать программу</a>
         <img class="features__image" src="img/features.png" width="280" height="270"
         alt="Cat Energy со вкусом курицы.">
       </div>
     </section>
-    <section class="goals main-container__goals">
+  </header>
+
+  <main class="main-container body__main">
+    <!-- Основное содержание главной страницы сайта -->
+    <section class="goals page-container main-container__goals">
       <!-- Блок с видами программ, целями аудитории  -->
         <h2 class="visually-hidden">Цели приема питания для котов</h2>
         <ul class="goals__list">
@@ -80,7 +78,7 @@
         </ul>
     </section>
 
-    <section class="advantages main-container__advantages">
+    <section class="advantages page-container main-container__advantages">
       <!-- Блок Как это работает  -->
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
@@ -147,6 +145,7 @@
     <section class="contacts main-container__contacts">
       <!-- Блок Контактов  -->
       <div class="contacts__wrapper">
+        <div class="contacts__text-container">
         <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
         <div class="contacts__description">
           <p class="contacts__text"> ул. Большая Конюшенная, д. 19/8 </p>
@@ -157,11 +156,12 @@
           <img class="contacts__picture" src="img/location.png" width="320" height="362"
             alt="Карта расположения офиса Cat Energy.">
         </div>
+      </div>
     </section>
-
   </main>
 
   <footer class="main-footer body__footer">
+    <div class="main-footer__wrapper page-container">
     <!-- Подвал сайта -->
       <a class="main-footer__logo" href="index.html">
         <img class="main-footer__logo-text" src="img/text-logo.svg" width="128" height="24"
@@ -195,10 +195,9 @@
             alt="Логотип HTML Academy.">
         </a>
       </div>
-
+    </div>
   </footer>
 
-</div>
 
 </body>
 

@@ -12,39 +12,39 @@
 
 <body class="body page__body">
 
-  <div class="page-container body__container">
+  <div class="body__container">
 
-  <header class="main-header body__header">
+  <header class="main-header main-header--inner body__header">
     <!-- Хедер сайта -->
-    <div class="main-header__wrapper header-logos">
-    <a class="main-header__logo">
-      <!-- Блок с логотипами -->
-      <img class="main-header__logo-image" src="img/cat-logo.svg" width="33" height="38"
-        alt="Функциональное питание для котов.">
-      <img class="main-header__logo-text" src="img/text-logo.svg" width="101" height="18" alt="Cat Energy.">
-    </a>
-    <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-  </div>
-    <nav class="main-navigation">
-      <!-- Блок с главным меню -->
-        <ul class="main-navigation__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">
-              главная
-            </a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">
-              каталог продукции
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">
-              подбор программы
-            </a>
-          </li>
-        </ul>
-    </nav>
+    <div class="main-header__wrapper">
+      <a class="main-header__logo">
+        <!-- Блок с логотипами -->
+        <img class="main-header__logo-image" src="img/cat-logo.svg" width="33" height="38"
+          alt="Функциональное питание для котов.">
+        <img class="main-header__logo-text" src="img/text-logo.svg" width="101" height="18" alt="Cat Energy.">
+      </a>
+      <nav class="main-navigation">
+        <!-- Блок с главным меню -->
+        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-navigation__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__link site-list__link--inner">
+                главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--inner" href="catalog.html">
+                каталог продукции
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link site-list__link--inner" href="form.html">
+                подбор программы
+              </a>
+            </li>
+          </ul>
+      </nav>
+        </div>
   </header>
 
   <main class="main-container">
@@ -400,10 +400,12 @@
     <section class="contacts main-container__contacts">
       <!-- Блок Контактов  -->
       <div class="contacts__wrapper contacts__wrapper--inner">
+        <div class="contacts__text-container contacts__text-container--inner">
         <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
         <div class="contacts__description">
           <p class="contacts__text"> ул. Большая Конюшенная, д. 19/8 </p>
           <p class="contacts__text"> Санкт-Петербург</p>
+        </div>
         </div>
       </div>
         <div class="contacts__map">
@@ -415,6 +417,7 @@
   </main>
 
   <footer class="main-footer body__footer">
+    <div class="main-footer__wrapper page-container">
     <!-- Подвал сайта -->
       <a class="main-footer__logo" href="index.html">
         <img class="main-footer__logo-text" src="img/text-logo.svg" width="128" height="24"
@@ -448,7 +451,7 @@
             alt="Логотип HTML Academy.">
         </a>
       </div>
-
+    </div>
   </footer>
 
   </div>

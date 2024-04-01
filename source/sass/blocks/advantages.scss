@@ -1,15 +1,3 @@
-.advantages {
-  width: 280px;
-
-  @media (min-width: $tablet-width) {
-    width: 708px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1220px;
-  }
-}
-
 .advantages__title {
   margin: 0;
   margin-bottom: 40px;
@@ -40,8 +28,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 230px 246px 248px 250px;
-    gap: 77px;
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
   }
 }
 
