@@ -1,7 +1,3 @@
-.goals {
-  background-color: $background-base;
-}
-
 .goals__list {
   list-style-type: none;
   margin: 0 auto;
@@ -10,6 +6,16 @@
   grid-template-columns: 280px;
   gap: 20px;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 708px;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 570px);
+    gap: 80px;
+  }
 }
 
 .goals__item {
@@ -17,6 +23,14 @@
   box-sizing: border-box;
   background-color: $background-secondary;
   color: $font-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding: 81px 63px 53px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 41px 61px 59px 52px;
+  }
 }
 
 .goals__title {
@@ -28,12 +42,33 @@
   line-height: 37px;
   text-transform: uppercase;
   color: $font-color-base;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 214px;
+  }
 }
 
 .goals__text {
   margin: 0;
   margin-top: 29px;
   color: $font-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 24px;
+    width: 340px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 73px;
+  }
 }
 
 .goals__to-catalog {
@@ -41,9 +76,19 @@
   margin-top: 38px;
   color: $font-color-base;
   text-align: center;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $font-family-secondary;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 48px;
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 23px;
+  }
 }

@@ -1,32 +1,86 @@
 .main-container {
   flex-grow: 1;
-}
-
-.main-container__features {
-  margin: 0 auto;
+  position: relative;
 }
 
 .main-container__goals {
   margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 82px auto 0;
+  }
 }
 
 .main-container__advantages {
-  margin: 0 auto;
   margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 45px auto 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 71px auto 0;
+  }
 }
 
 .main-container__example {
   margin: 0 auto;
   margin-top: 49px;
+  padding: 25px 20px 40px 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 45px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 23%, rgba(242, 242, 242, 1) 23%, rgba(242, 242, 242, 1) 100%);
+    margin: 69px 0 auto;
+  }
+}
+
+.main-container__contacts {
+  margin: 0 auto;
 }
 
 .main-container__products {
   margin: 0 auto;
   margin-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 74px;
+  }
+}
+
+.main-container__supplements {
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 87px;
+  }
 }
 
 .main-container__promo {
+  margin: 35px auto 35px;
+
+  @media (min-width: $tablet-width) {
+    margin: 70px auto 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.main-container__selection {
   margin: 0 auto;
-  margin-top: 35px;
-  margin-bottom: 35px;
 }
