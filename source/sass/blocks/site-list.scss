@@ -9,6 +9,7 @@
     width: 436px;
     flex-direction: row;
     gap: 33px;
+    align-items: normal;
   }
 
   @media (min-width: $desktop-width) {
@@ -18,12 +19,77 @@
 }
 
 .site-list__item {
+  position: relative;
   margin: 0;
   padding: 0;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #e6e6e6;
+    }
+  }
+
+  &:last-child {
+    @media (max-width: $mobile-width-only) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #e6e6e6;
+      }
+    }
+  }
+
+  &--current {
+    @media (min-width: $tablet-width) {
+      position: relative;
+      width: auto;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 4px;
+        left: 0;
+        height: 2px;
+        background: $background-branded;
+      }
+    }
+
+    &:has(.site-list__link--inner) {
+      @media (min-width: $desktop-width) {
+        &::after {
+          background: $background-branded;
+        }
+      }
+    }
+
+    &:not(:has(.site-list__link--inner)) {
+      @media (min-width: $desktop-width) {
+        &::after {
+          top: 36px;
+          background: $background-base;
+        }
+      }
+    }
+  }
 }
 
 .site-list__link {
-  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  display: block;
   font-family: $font-family-secondary;
   color: $font-color-base;
   font-size: 20px;
@@ -31,8 +97,48 @@
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   padding-top: 22px;
   padding-bottom: 24px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    @media (max-width: $mobile-width-only) {
+      color: #5eaa2f;
+      opacity: 0.6;
+    }
+
+    &::after {
+      @media (min-width: $tablet-width) {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        left: 0;
+        height: 2px;
+        background: $background-branded;
+      }
+
+      @media (min-width: $desktop-width) {
+        background: $background-base;
+      }
+    }
+  }
+
+  &:focus {
+    color: #5eaa2f;
+
+    @media (min-width: $desktop-width) {
+      color: $font-color-secondary;
+    }
+  }
+
+  &--down {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
@@ -49,6 +155,24 @@
   &--inner {
     @media (min-width: $desktop-width) {
       color: $font-color-detailed;
+
+      &:active {
+        &::after {
+          @media (min-width: $tablet-width) {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -8px;
+            left: 0;
+            height: 2px;
+            background: $background-branded;
+          }
+        }
+      }
+
+      &:focus {
+        color: $background-branded;
+      }
     }
   }
 }

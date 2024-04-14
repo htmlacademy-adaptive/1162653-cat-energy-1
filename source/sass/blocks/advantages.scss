@@ -24,7 +24,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 247px 249px;
-    gap: 137px;
+    gap: 37px 137px;
   }
 
   @media (min-width: $desktop-width) {
@@ -35,9 +35,91 @@
 
 .advantages__item {
   padding-left: 80px;
+  position: relative;
+
+  &:first-of-type::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/icons/advantages-leaf-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-of-type(2n)::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/icons/advantages-glass-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-of-type(3n)::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/icons/advantages-fork-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-of-type(4n)::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/icons/advantages-clock-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
 
   @media (min-width: $tablet-width) {
     padding: 151px 26px 57px 0;
+
+    &:first-of-type::before {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+      left: 0;
+      background-image: url("../img/icons/advantages-leaf-tablet.svg");
+    }
+
+    &:nth-of-type(2n)::before {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+      left: 0;
+      background-image: url("../img/icons/advantages-glass-tablet.svg");
+    }
+
+    &:nth-of-type(3n)::before {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+      left: 0;
+      background-image: url("../img/icons/advantages-fork-tablet.svg");
+    }
+
+    &:nth-of-type(4n)::before {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+      left: 0;
+      background-image: url("../img/icons/advantages-clock-tablet.svg");
+    }
   }
 }
 
@@ -47,5 +129,24 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.advantages__number {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    color: $background-secondary;
+    text-align: center;
+    font-family: $font-family-secondary;
+    font-size: 280px;
+    line-height: 280px;
+    z-index: -1;
   }
 }

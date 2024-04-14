@@ -1,0 +1,20 @@
+.input-radio + .form__goal-control-mark {
+  outline: 1px solid #cdcdcd;
+  border-radius: 50%;
+}
+
+
+.input-radio + .form__goal-control-mark:hover,
+.input-radio + .form__goal-control-mark:active {
+  outline: 1px solid #bababa;
+}
+
+.input-radio:focus-visible + .form__goal-control-mark {
+  outline: 1px solid $font-color-base;
+}
+
+.input-radio:checked + .form__goal-control-mark {
+  background-image: url("../img/icons/radio-true.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

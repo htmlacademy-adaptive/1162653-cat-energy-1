@@ -24,11 +24,24 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 245px);
-    gap: 120px 80px;
+    gap: 144px 80px;
+  }
+
+  &::before {
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      top: 77px;
+      left: 0;
+      background-color: #ebebeb;
+    }
   }
 }
 
 .products__title {
+  position: relative;
   margin: 0;
   margin-bottom: 41px;
   padding-left: 20px;
@@ -46,6 +59,7 @@
 }
 
 .products__item {
+  position: relative;
   padding: 20px 20px 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -63,9 +77,31 @@
     background-color: #f2f2f2;
   }
 
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 38px 40px;
+  }
+
+  &::after {
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      box-shadow: 100vw 0 #ebebeb;
+      height: 1px;
+      right: 0;
+      bottom: 0;
+      background-color: #ebebeb;
+    }
+  }
+
   &--more {
+    position: relative;
+    box-sizing: border-box;
+    width: 280px;
     margin: 0 auto;
-    padding: 25px 20px 25px;
+    padding: 25px 0 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,15 +110,30 @@
       width: 324px;
       padding: 50px 20px 40px;
       box-sizing: border-box;
+      outline: 2px solid $background-secondary;
     }
 
     @media (min-width: $desktop-width) {
       width: 245px;
     }
+
+    &::after {
+      @media (max-width: $mobile-width-only) {
+        position: absolute;
+        content: "";
+        width: 100vw;
+        box-shadow: 100vw 0 #ebebeb;
+        height: 1px;
+        right: 0;
+        bottom: 0;
+        background-color: #ebebeb;
+      }
+    }
   }
 }
 
 .products__image {
+  display: block;
   grid-area: image;
 
   @media (min-width: $tablet-width) {
@@ -93,13 +144,21 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 31px;
+    margin-top: -20px;
+    margin-bottom: 0;
   }
 }
 
 .products__link {
   color: #222222;
   text-decoration: none;
+
+  &:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 107px;
+  }
 }
 
 .products__heading {
@@ -123,6 +182,7 @@
   @media (min-width: $desktop-width) {
     width: 140px;
     margin-bottom: 23px;
+    margin-top: 30px;
   }
 }
 
@@ -132,7 +192,7 @@
 
   @media (min-width: $tablet-width) {
     width: 134px;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
   }
 }
 
@@ -147,6 +207,12 @@
     width: 170px;
     margin-bottom: 82px;
     text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 90px;
   }
 }
 
@@ -171,31 +237,30 @@
 }
 
 .products__order {
-  padding: 10px 44px;
-  font-family: $font-family-secondary;
-  color: $font-color-contrast;
-  background-color: $background-branded;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: uppercase;
   grid-area: button;
   align-self: stretch;
-
-  &--secondary {
-    background-color: $background-secondary;
-    color: $font-color-secondary;
-  }
 }
 
 .products__ingridients-item {
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      bottom: -5px;
+      left: 0;
+      background-color: #cdcdcd;
+    }
   }
 }
 
@@ -215,9 +280,25 @@
 .products__more-items {
   margin: 0;
   margin-bottom: 23px;
+  border: none;
+  background-color: $background-base;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.products__plus-icon {
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
   }
 }
 

@@ -1,4 +1,11 @@
 .copyright__link {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__logo + .copyright__logo {
+  @media (min-width: $tablet-width) {
+    margin-left: 23px;
+  }
 }

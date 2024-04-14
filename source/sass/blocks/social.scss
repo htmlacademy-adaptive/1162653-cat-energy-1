@@ -4,6 +4,24 @@
 
 .social__list {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  display: flex;
+  width: 132px;
+  gap: 24px;
+  align-items: center;
+}
+
+.social__link {
+  color: #666666;
+
+  &:hover,
+  &:focus {
+    color: $background-branded;
+  }
+
+  &:active {
+    color: $background-branded;
+    opacity: 0.3;
+  }
 }

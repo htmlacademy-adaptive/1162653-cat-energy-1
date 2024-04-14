@@ -19,23 +19,80 @@
 }
 
 .goals__item {
-  padding: 24px 33px 18px 20px;
+  position: relative;
+  padding: 30px 33px 18px 20px;
   box-sizing: border-box;
   background-color: $background-secondary;
   color: $font-color-secondary;
 
+  &:first-of-type::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    top: 24px;
+    left: 20px;
+    background-image: url("../img/icons/goals-slim-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-of-type(2n)::before {
+    position: absolute;
+    content: "";
+    width: 67px;
+    height: 50px;
+    top: 24px;
+    left: 13px;
+    background-image: url("../img/icons/goals-mass-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 81px 63px 53px 52px;
+    padding: 77px 316px 53px 52px;
+
+    &:first-of-type::before {
+      width: 200px;
+      height: 211px;
+      top: 81px;
+      left: 445px;
+      background-image: url("../img/icons/goals-slim-tablet.svg");
+    }
+
+    &:nth-of-type(2n)::before {
+      width: 268px;
+      height: 200px;
+      top: 91px;
+      left: 411px;
+      background-image: url("../img/icons/goals-mass-tablet.svg");
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 41px 61px 59px 52px;
+    padding: 77px 61px 55px 52px;
+
+    &:first-of-type::before {
+      width: 100px;
+      height: 106px;
+      top: 41px;
+      left: 52px;
+      background-image: url("../img/icons/goals-slim-desktop.svg");
+    }
+
+    &:nth-of-type(2n)::before {
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      left: 33px;
+      background-image: url("../img/icons/goals-mass-desktop.svg");
+    }
   }
 }
 
 .goals__title {
   margin: 0;
-  padding-left: 91px;
+  padding-left: 70px;
   font-family: $font-family-secondary;
   font-size: 24px;
   font-weight: 400;
@@ -50,14 +107,28 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 214px;
+    padding-left: 162px;
   }
 }
 
 .goals__text {
+  position: relative;
   margin: 0;
   margin-top: 29px;
+  margin-bottom: 23px;
   color: $font-color-secondary;
+
+  @media (max-width: $mobile-width-only) {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 240px;
+      height: 1px;
+      top: 113px;
+      left: 0;
+      background-color: #d9d9d9;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -68,12 +139,15 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 73px;
+    width: 457px;
   }
 }
 
 .goals__to-catalog {
+  position: relative;
   margin: 0;
-  margin-top: 38px;
+  margin-top: 15px;
+  padding-right: 47px;
   color: $font-color-base;
   text-align: center;
   font-family: $font-family-secondary;
@@ -90,5 +164,34 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 23px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 10px;
+    top: 3px;
+    right: 0;
+    background-image: url("../img/icons/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      top: 10px;
+    }
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
+.goals-icon {
+  margin-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 25px;
   }
 }

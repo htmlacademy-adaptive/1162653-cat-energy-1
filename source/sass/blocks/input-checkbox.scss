@@ -1,0 +1,19 @@
+.input-checkbox + .form__extra-control-mark {
+  outline: 1px solid #cdcdcd;
+}
+
+
+.input-checkbox + .form__extra-control-mark:hover,
+.input-checkbox + .form__extra-control-mark:active {
+  outline: 1px solid #bababa;
+}
+
+.input-checkbox:focus-visible + .form__extra-control-mark {
+  outline: 1px solid $font-color-base;
+}
+
+.input-checkbox:checked + .form__extra-control-mark {
+  background-image: url("../img/icons/checkbox-true.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
