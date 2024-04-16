@@ -37,88 +37,43 @@
   padding-left: 80px;
   position: relative;
 
-  &:first-of-type::before {
+  &::before {
     position: absolute;
     content: "";
     width: 60px;
     height: 60px;
     top: 0;
     left: 0;
-    background-image: url("../img/icons/advantages-leaf-mobile.svg");
+    background-color: $background-branded;
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &:nth-of-type(2n)::before {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 60px;
-    top: 0;
-    left: 0;
-    background-image: url("../img/icons/advantages-glass-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &--leaf::before {
+    background-image: url("../img/icons/advantages-leaf.svg");
   }
 
-  &:nth-of-type(3n)::before {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 60px;
-    top: 0;
-    left: 0;
-    background-image: url("../img/icons/advantages-fork-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &--glass::before {
+    background-image: url("../img/icons/advantages-glass.svg");
   }
 
-  &:nth-of-type(4n)::before {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 60px;
-    top: 0;
-    left: 0;
-    background-image: url("../img/icons/advantages-clock-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &--fork::before {
+    background-image: url("../img/icons/advantages-fork.svg");
+  }
+
+  &--clock::before {
+    background-image: url("../img/icons/advantages-clock.svg");
   }
 
 
   @media (min-width: $tablet-width) {
     padding: 151px 26px 57px 0;
 
-    &:first-of-type::before {
+    &::before {
       width: 80px;
       height: 80px;
       top: 40px;
       left: 0;
-      background-image: url("../img/icons/advantages-leaf-tablet.svg");
-    }
-
-    &:nth-of-type(2n)::before {
-      width: 80px;
-      height: 80px;
-      top: 40px;
-      left: 0;
-      background-image: url("../img/icons/advantages-glass-tablet.svg");
-    }
-
-    &:nth-of-type(3n)::before {
-      width: 80px;
-      height: 80px;
-      top: 40px;
-      left: 0;
-      background-image: url("../img/icons/advantages-fork-tablet.svg");
-    }
-
-    &:nth-of-type(4n)::before {
-      width: 80px;
-      height: 80px;
-      top: 40px;
-      left: 0;
-      background-image: url("../img/icons/advantages-clock-tablet.svg");
     }
   }
 }

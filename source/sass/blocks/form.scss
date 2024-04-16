@@ -150,41 +150,6 @@
   }
 }
 
-.form__goal-control {
-  position: relative;
-}
-
-.form__goal-control-label {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: normal;
-  }
-}
-
-.form__goal-control-mark {
-  position: absolute;
-  top: -6px;
-  left: -45px;
-  width: 30px;
-  height: 30px;
-  margin: 0;
-  padding: 0;
-
-  @media (min-width: $tablet-width) {
-    top: -10px;
-    left: -60px;
-    width: 40px;
-    height: 40px;
-  }
-}
-
 .form__contacts {
   margin: 0;
   margin-bottom: 4px;
@@ -442,11 +407,12 @@
   padding: 0;
   margin-top: 14px;
   padding-left: 20px;
-  display: grid;
-  grid-template-columns: auto;
+  display: flex;
+  flex-direction: column;
   gap: 13px;
 
   @media (min-width: $tablet-width) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px 123px;
     margin-top: 17px;
@@ -456,12 +422,14 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding-left: 0;
   }
 }
 
 .form__extra-item {
+  margin: 0;
   padding: 6px 0 6px 45px;
 
   @media (min-width: $tablet-width) {
@@ -495,11 +463,95 @@
   position: absolute;
   top: -9px;
   left: -45px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 
   @media (min-width: $tablet-width) {
     top: -12px;
     left: -60px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__extra-control-input + .form__extra-control-mark {
+  outline: 1px solid #cdcdcd;
+}
+
+
+.form__extra-control-input + .form__extra-control-mark:hover,
+.form__extra-control-input + .form__extra-control-mark:active {
+  outline: 1px solid #bababa;
+}
+
+.form__extra-control-input:focus-visible + .form__extra-control-mark {
+  outline: 1px solid $font-color-base;
+}
+
+.form__extra-control-input:checked + .form__extra-control-mark {
+  background-image: url("../img/icons/checkbox-true.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px 26px;
+}
+
+.form__goal-control {
+  position: relative;
+}
+
+.form__goal-control-label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.form__goal-control-mark {
+  position: absolute;
+  top: -6px;
+  left: -45px;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    top: -10px;
+    left: -60px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__goal-control-input + .form__goal-control-mark {
+  outline: 1px solid #cdcdcd;
+  border-radius: 50%;
+}
+
+
+.form__goal-control-input + .form__goal-control-mark:hover,
+.form__goal-control-input + .form__goal-control-mark:active {
+  outline: 1px solid #bababa;
+}
+
+.form__goal-control-input:focus-visible + .form__goal-control-mark {
+  outline: 1px solid $font-color-base;
+}
+
+.form__goal-control-input:checked + .form__goal-control-mark {
+  background-image: url("../img/icons/radio-true.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 18px 18px;
   }
 }

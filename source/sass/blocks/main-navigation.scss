@@ -4,7 +4,7 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .main-navigation--closed .site-list__item {
+  .main-navigation--closed .main-navigation__list {
     display: none;
   }
 }
@@ -105,10 +105,7 @@
 
 
 .main-navigation--nojs .main-navigation__list {
+  display: block;
   position: static;
   min-height: 0;
-}
-
-.main-navigation--nojs .site-list__item {
-  display: block;
 }

@@ -109,6 +109,7 @@
     @media (min-width: $tablet-width) {
       width: 324px;
       padding: 50px 20px 40px;
+      background-color: $background-base;
       box-sizing: border-box;
       outline: 2px solid $background-secondary;
     }

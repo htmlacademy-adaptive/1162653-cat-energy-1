@@ -25,67 +25,69 @@
   background-color: $background-secondary;
   color: $font-color-secondary;
 
-  &:first-of-type::before {
+  &::before {
     position: absolute;
     content: "";
-    width: 50px;
-    height: 50px;
     top: 24px;
-    left: 20px;
-    background-image: url("../img/icons/goals-slim-mobile.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &:nth-of-type(2n)::before {
+  &--slim::before {
     position: absolute;
     content: "";
+    width: 50px;
+    height: 53px;
+    left: 20px;
+    background-image: url("../img/icons/goals-slim.svg");
+    background-size: 50px 53px;
+  }
+
+  &--mass::before {
     width: 67px;
     height: 50px;
-    top: 24px;
     left: 13px;
-    background-image: url("../img/icons/goals-mass-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("../img/icons/goals-mass.svg");
+    background-size: 67px 50px;
   }
 
   @media (min-width: $tablet-width) {
     padding: 77px 316px 53px 52px;
 
-    &:first-of-type::before {
+    &--slim::before {
       width: 200px;
       height: 211px;
       top: 81px;
       left: 445px;
-      background-image: url("../img/icons/goals-slim-tablet.svg");
+      background-size: 200px 211px;
     }
 
-    &:nth-of-type(2n)::before {
+    &--mass::before {
       width: 268px;
       height: 200px;
       top: 91px;
       left: 411px;
-      background-image: url("../img/icons/goals-mass-tablet.svg");
+      background-size: 268px 200px;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding: 77px 61px 55px 52px;
 
-    &:first-of-type::before {
+    &--slim::before {
       width: 100px;
       height: 106px;
       top: 41px;
       left: 52px;
-      background-image: url("../img/icons/goals-slim-desktop.svg");
+      background-size: 100px 106px;
     }
 
-    &:nth-of-type(2n)::before {
+    &--mass::before {
       width: 134px;
       height: 100px;
       top: 47px;
       left: 33px;
-      background-image: url("../img/icons/goals-mass-desktop.svg");
+      background-size: 134px 100px;
     }
   }
 }
