@@ -1,17 +1,76 @@
 .main-navigation {
   display: flex;
+  position: relative;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-navigation--closed .main-navigation__list {
+    display: none;
+  }
 }
 
 .main-navigation__toggle {
   position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 23px;
-  right: 20px;
+  display: block;
+  top: -43px;
+  right: calc((100vw - 283px) / 2);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $font-color-base;
+  box-shadow: 0 8px 0 0 $font-color-base, 0 16px 0 0 $font-color-base;
+  z-index: 2;
+}
+
+.main-navigation--closed .main-navigation__toggle:active::before {
+  background-color: fade($font-color-base, 30%);
+  box-shadow:
+    0 8px 0 0 fade($font-color-base, 30%),
+    0 16px 0 0 fade($font-color-base, 30%);
+}
+
+.main-navigation--opened .main-navigation__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $font-color-base;
+    z-index: 2;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade($font-color-base, 30%);
   }
 }
 
@@ -25,6 +84,28 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
+    padding-top: 16px;
   }
+}
+
+.main-navigation--opened .main-navigation__list {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    min-height: 10vh;
+    background-color: $background-base;
+  }
+}
+
+.main-navigation--nojs .main-navigation__toggle {
+  display: none;
+}
+
+
+.main-navigation--nojs .main-navigation__list {
+  display: block;
+  position: static;
+  min-height: 0;
 }

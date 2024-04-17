@@ -24,7 +24,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 247px 249px;
-    gap: 137px;
+    gap: 37px 137px;
   }
 
   @media (min-width: $desktop-width) {
@@ -35,9 +35,46 @@
 
 .advantages__item {
   padding-left: 80px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: $background-branded;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--leaf::before {
+    background-image: url("../img/icons/advantages-leaf.svg");
+  }
+
+  &--glass::before {
+    background-image: url("../img/icons/advantages-glass.svg");
+  }
+
+  &--fork::before {
+    background-image: url("../img/icons/advantages-fork.svg");
+  }
+
+  &--clock::before {
+    background-image: url("../img/icons/advantages-clock.svg");
+  }
+
 
   @media (min-width: $tablet-width) {
     padding: 151px 26px 57px 0;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+      left: 0;
+    }
   }
 }
 
@@ -47,5 +84,24 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.advantages__number {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    color: $background-secondary;
+    text-align: center;
+    font-family: $font-family-secondary;
+    font-size: 280px;
+    line-height: 280px;
+    z-index: -1;
   }
 }
