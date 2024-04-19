@@ -1,3 +1,5 @@
+// Открытие и закрытие мобильной версии меню
+
 let navMain = document.querySelector('.main-navigation');
 let navToggle = document.querySelector('.main-navigation__toggle');
 
@@ -12,3 +14,4 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-navigation--opened');
     }
 })
+
