@@ -136,10 +136,10 @@
 .products__image {
   display: block;
   grid-area: image;
+  width: 100%;
+  height: auto;
 
   @media (min-width: $tablet-width) {
-    width: 161px;
-    height: 172px;
     margin-top: -60px;
     margin-bottom: 41px;
   }

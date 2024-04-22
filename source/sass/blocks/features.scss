@@ -43,6 +43,11 @@
   background-position: top center;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/features-mobile@2x.jpg"),
+      linear-gradient(180deg, #64a83b 100%, #ffffff 100%);
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 0;
@@ -102,13 +107,18 @@
   right: 0;
 
   @media (min-width: $tablet-width) {
-    top: 406px;
+    width: 709px;
+    height: 609px;
+    top: 266px;
     z-index: -1;
   }
 
   @media (min-width: $desktop-width) {
-    top: 143px;
-    left: 57px;
+    margin: 0;
+    width: 552px;
+    height: 499px;
+    top: 32px;
+    left: 447px;
     z-index: 1;
   }
 }
