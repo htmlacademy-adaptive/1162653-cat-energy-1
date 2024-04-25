@@ -9,3 +9,13 @@
     margin-left: 23px;
   }
 }
+
+.copyright__logo {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 2px;
+  }
+}

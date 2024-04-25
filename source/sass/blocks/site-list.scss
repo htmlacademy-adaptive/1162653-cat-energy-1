@@ -59,8 +59,9 @@
       &::after {
         content: "";
         position: absolute;
+        width: 100%;
         right: 0;
-        bottom: 4px;
+        bottom: 2px;
         left: 0;
         height: 2px;
         background: $background-branded;

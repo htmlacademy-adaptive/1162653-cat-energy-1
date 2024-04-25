@@ -22,14 +22,14 @@
     width: 704px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin: 0 auto;
-    padding-left: 34px;
-    padding-right: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1220px;
+    justify-content: space-between;
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
@@ -41,17 +41,19 @@
   width: 280px;
   display: flex;
   margin: 0 auto;
-  padding: 13px 20px 15px;
+  padding: 13px 20px 14px;
   align-items: center;
 
   @media (min-width: $tablet-width) {
     width: 174px;
     margin: 0;
+    margin-right: 92px;
     padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 202px;
+    margin-right: 0;
   }
 
   &:hover {
@@ -68,6 +70,9 @@
 }
 
 .main-header__logo-image {
+  display: block;
+  margin: 0;
+  padding: 0;
   margin-right: 56px;
   height: 38px;
 
@@ -85,9 +90,13 @@
 }
 
 .main-header__logo-text {
+  display: block;
+  margin: 0;
+  padding: 0;
   height: 18px;
 
   @media (min-width: $desktop-width) {
+    width: 118px;
     height: 21px;
   }
 }

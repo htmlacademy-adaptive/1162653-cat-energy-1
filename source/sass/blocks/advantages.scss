@@ -1,6 +1,6 @@
 .advantages__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   color: $font-color-base;
   font-family: $font-family-secondary;
   font-size: 36px;
@@ -42,7 +42,7 @@
     content: "";
     width: 60px;
     height: 60px;
-    top: 0;
+    top: -2px;
     left: 0;
     background-color: $background-branded;
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@
 
 
   @media (min-width: $tablet-width) {
-    padding: 151px 26px 57px 0;
+    padding: 151px 0 57px 0;
 
     &::before {
       width: 80px;
@@ -103,5 +103,9 @@
     font-size: 280px;
     line-height: 280px;
     z-index: -1;
+  }
+
+  &--first {
+    right: 22px;
   }
 }

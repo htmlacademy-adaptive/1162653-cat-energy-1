@@ -10,6 +10,15 @@
   width: 132px;
   gap: 24px;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.social__item {
+  margin: 0;
+  padding: 0;
 }
 
 .social__link {
@@ -24,4 +33,10 @@
     color: $background-branded;
     opacity: 0.3;
   }
+}
+
+.social__icon {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
