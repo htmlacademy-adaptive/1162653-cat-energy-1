@@ -1,6 +1,7 @@
 .site-list {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   list-style-type: none;
   align-items: center;

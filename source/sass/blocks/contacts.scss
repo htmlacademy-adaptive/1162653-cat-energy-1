@@ -23,6 +23,7 @@
   margin: 0 auto;
   padding: 26px 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   z-index: 10;
 
@@ -75,9 +76,14 @@
   @media (min-width: $tablet-width) {
     width: 157px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 

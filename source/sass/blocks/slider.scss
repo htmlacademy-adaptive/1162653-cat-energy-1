@@ -1,6 +1,7 @@
 .slider {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   width: 280px;
 
   @media (min-width: $tablet-width) {
@@ -12,7 +13,6 @@
 .slider__wrapper {
   position: relative;
   width: 50%;
-  height: 100%;
   overflow: hidden;
 }
 
