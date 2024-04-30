@@ -38,6 +38,7 @@
     content: "";
     width: 50px;
     height: 53px;
+    top: 21px;
     left: 20px;
     background-image: url("../img/icons/goals-slim.svg");
     background-size: 50px 53px;
@@ -136,6 +137,7 @@
     font-size: 16px;
     line-height: 24px;
     margin-top: 24px;
+    margin-bottom: 0;
     width: 340px;
   }
 
@@ -149,7 +151,7 @@
   position: relative;
   margin: 0;
   margin-top: 15px;
-  padding-right: 47px;
+  padding: 4px 47px 4px 0;
   color: $font-color-base;
   text-align: center;
   font-family: $font-family-secondary;
@@ -173,14 +175,15 @@
     content: "";
     width: 32px;
     height: 10px;
-    top: 3px;
-    right: 0;
+    top: 7px;
+    right: -2px;
     background-image: url("../img/icons/arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
 
     @media (min-width: $tablet-width) {
-      top: 10px;
+      top: 14px;
+      right: -12px;
     }
   }
 

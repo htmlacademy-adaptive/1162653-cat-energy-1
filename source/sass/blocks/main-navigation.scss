@@ -1,5 +1,6 @@
 .main-navigation {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
 }
 
@@ -13,7 +14,7 @@
   position: absolute;
   display: block;
   top: -43px;
-  right: calc((100vw - 283px) / 2);
+  right: calc((100vw - 278px) / 2);
   width: 24px;
   height: 24px;
   padding: 0;

@@ -65,10 +65,12 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 65px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 74px;
+    margin-bottom: 36px;
   }
 
   &::before {
