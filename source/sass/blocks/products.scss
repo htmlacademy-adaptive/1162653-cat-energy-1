@@ -209,16 +209,6 @@
       margin-bottom: 23px;
     }
   }
-
-  &:first-of-type {
-    @media ($mobile-width-only) {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      height: 107px;
-    }
-  }
 }
 
 .products__text-wrapper {
