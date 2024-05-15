@@ -24,6 +24,8 @@
   box-sizing: border-box;
   background-color: $background-secondary;
   color: $font-color-secondary;
+  display: flex;
+  flex-direction: column;
 
   &::before {
     position: absolute;
@@ -148,43 +150,40 @@
 }
 
 .goals__to-catalog {
+  display: block;
   position: relative;
   margin: 0;
   margin-top: 15px;
   padding: 4px 47px 4px 0;
   color: $font-color-base;
-  text-align: center;
   font-family: $font-family-secondary;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 102px center;
+  background-size: 32px 10px;
+  transition: all 0.1s linear;
+  text-align: start;
+  max-width: 180px;
 
   @media (min-width: $tablet-width) {
     margin-top: 48px;
     font-size: 20px;
     line-height: normal;
+    background-position: 133px center;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 23px;
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 32px;
-    height: 10px;
-    top: 7px;
-    right: -2px;
-    background-image: url("../img/arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (min-width: $tablet-width) {
-      top: 14px;
-      right: -12px;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    background-image: url("../img/arrow-hover.svg");
   }
 
   &:active,
@@ -193,10 +192,10 @@
   }
 }
 
-.goals-icon {
-  margin-left: 15px;
+.goals__item--mass .goals__to-catalog {
+  background-position: 98px center;
 
   @media (min-width: $tablet-width) {
-    margin-left: 25px;
+    background-position: 129px center;
   }
 }

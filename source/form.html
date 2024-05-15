@@ -7,6 +7,7 @@
   <title>HTML Academy: форма подбора питания Кэт Энерджи</title>
   <link rel="preload" href="/fonts/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preconnect" href="https://maps.googleapis.com">
   <link rel="preconnect" href="https://maps.gstatic.com">
   <link rel="stylesheet" href="css/style.min.css">
@@ -121,12 +122,12 @@
             <!-- Контакты владельца -->
             <legend class="form__contacts-title">Контактные данные (владельца кота)</legend>
             <div class="form__contacts-wrapper">
-            <p class="form__contacts-group">
+            <p class="form__contacts-group form__contacts-group--email">
               <label class="form__contacts-label" for="email">E-mail:*</label>
               <input class="form__contacts-input input-text" type="email" id="email" name="email"
                 placeholder="кuklachev@gmail.com" required>
             </p>
-            <p class="form__contacts-group">
+            <p class="form__contacts-group form__contacts-group--phone">
               <label class="form__contacts-label" for="phone">Телефон:*</label>
               <input class="form__contacts-input input-text" type="tel" id="phone" name="phone"
                 placeholder="8 (960) 900-60-90" required>
@@ -221,8 +222,10 @@
     <div class="main-footer__wrapper page-container">
     <!-- Подвал сайта -->
       <a class="main-footer__logo" href="index.html">
-        <img class="main-footer__logo-text" src="img/text-logo.svg" width="128" height="24"
-          alt="Логотип Cat Energy.">
+        <span class="visually-hidden">Cat Energy</span>
+          <svg class="main-footer__logo-text" width="128" height="24">
+            <use xlink:href="img/sprite.svg#text-logo"></use>
+          </svg>
       </a>
       <div class="main-footer__social social">
         <ul class="social__list">
@@ -257,8 +260,9 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__logo" src="img/html-logo-text.svg" width="113" height="20"
             alt="Текстовый логотип HTML Academy.">
-          <img class="copyright__logo" src="img/html-logo-image.svg" width="27" height="34"
-            alt="Логотип HTML Academy.">
+            <svg class="copyright__icon" width="27" height="34">
+              <use xlink:href="img/sprite.svg#html-logo-image"></use>
+            </svg>
         </a>
       </div>
     </div>

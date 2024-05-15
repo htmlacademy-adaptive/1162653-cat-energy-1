@@ -24,21 +24,22 @@
 }
 
 .social__link {
-  color: #666666;
-
-  &:hover,
-  &:focus {
-    color: $background-branded;
-  }
-
-  &:active {
-    color: $background-branded;
-    opacity: 0.3;
-  }
+  display: block;
 }
 
 .social__icon {
   display: block;
   margin: 0;
   padding: 0;
+  fill: #666666;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: $background-branded;
+}
+
+.social__link:active .social__icon {
+  fill: $background-branded;
+  opacity: 0.3;
 }

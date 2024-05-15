@@ -7,6 +7,7 @@
   <title>HTML Academy: каталог Кэт Энерджи</title>
   <link rel="preload" href="/fonts/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preconnect" href="https://maps.googleapis.com">
   <link rel="preconnect" href="https://maps.gstatic.com">
   <link rel="stylesheet" href="css/style.min.css">
@@ -65,7 +66,7 @@
         <ul class="products__list">
           <li class="products__item">
             <div class="products__content-wrapper">
-            <a class="products__link products__link--picture" href="">
+            <a class="products__link products__link--small-picture" href="">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-chicken-small-tablet.webp 1x, img/catalog/cat-energy-chicken-small-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/cat-energy-chicken-small-mobile.webp 1x, img/catalog/cat-energy-chicken-small-mobile@2x.webp 2x">
@@ -158,7 +159,7 @@
 
           <li class="products__item">
             <div class="products__content-wrapper">
-            <a class="products__link products__link--picture" href="">
+            <a class="products__link products__link--small-picture" href="">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-fish-small-tablet.webp 1x, img/catalog/cat-energy-fish-small-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/catalog/cat-energy-fish-small-mobile.webp 1x, img/catalog/cat-energy-fish-small-mobile@2x.webp 2x">
@@ -251,7 +252,7 @@
 
           <li class="products__item">
             <div class="products__content-wrapper">
-            <a class="products__link products__link--picture" href="">
+            <a class="products__link products__link--small-picture" href="">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-buckwheat-small-tablet.webp 1x, img/catalog/cat-energy-buckwheat-small-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/cat-energy-buckwheat-small-mobile.webp 1x, img/catalog/cat-energy-buckwheat-small-mobile@2x.webp 2x">
@@ -346,7 +347,7 @@
 
           <li class="products__item">
             <div class="products__content-wrapper">
-            <a class="products__link products__link--picture" href="">
+            <a class="products__link products__link--small-picture" href="">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/cat-energy-rice-tablet.webp 1x, img/catalog/cat-energy-rice-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/cat-energy-rice-mobile.webp 1x, img/catalog/cat-energy-rice-mobile@2x.webp 2x">
@@ -519,8 +520,10 @@
     <div class="main-footer__wrapper page-container">
     <!-- Подвал сайта -->
       <a class="main-footer__logo" href="index.html">
-        <img class="main-footer__logo-text" src="img/text-logo.svg" width="128" height="24"
-          alt="Логотип Cat Energy.">
+        <span class="visually-hidden">Cat Energy</span>
+          <svg class="main-footer__logo-text" width="128" height="24">
+            <use xlink:href="img/sprite.svg#text-logo"></use>
+          </svg>
       </a>
       <div class="main-footer__social social">
         <ul class="social__list">
@@ -555,8 +558,9 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__logo" src="img/html-logo-text.svg" width="113" height="20"
             alt="Текстовый логотип HTML Academy.">
-          <img class="copyright__logo" src="img/html-logo-image.svg" width="27" height="34"
-            alt="Логотип HTML Academy.">
+            <svg class="copyright__icon" width="27" height="34">
+              <use xlink:href="img/sprite.svg#html-logo-image"></use>
+            </svg>
         </a>
       </div>
     </div>

@@ -27,6 +27,9 @@
 }
 
 .main-footer__logo {
+  display: block;
+  margin: 0;
+  padding: 0;
   padding-top: 20px;
   padding-bottom: 20px;
 
@@ -89,10 +92,26 @@
       background-color: #d9d9d9;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 6px;
+  }
 }
 
 .main-footer__logo-text {
   display: block;
   margin: 0;
   padding: 0;
+  width: 128px;
+  height: 24px;
+  fill: #111111;
+}
+
+.main-footer__logo:hover .main-footer__logo-text,
+.main-footer__logo:focus .main-footer__logo-text {
+  fill: #3e3e3e;
+}
+
+.main-footer__logo:active .main-footer__logo-text {
+  fill: #6b6b6b;
 }
