@@ -154,10 +154,6 @@
   @media (min-width: $tablet-width) {
     padding: 5px 0 5px 60px;
   }
-
-  &--disabled {
-    opacity: 0.3;
-  }
 }
 
 .form__contacts {
@@ -534,10 +530,6 @@
   @media (min-width: $tablet-width) {
     padding: 5px 0 5px 60px;
   }
-
-  &--disabled {
-    opacity: 0.3;
-  }
 }
 
 .form__extra-control {
@@ -657,4 +649,11 @@
   @media (min-width: $tablet-width) {
     background-size: 18px 18px;
   }
+}
+
+.form__extra-control-input:disabled ~ .form__extra-control-mark,
+.form__extra-control-input:disabled ~ .form__extra-control-label,
+.form__goal-control-input:disabled ~ .form__goal-control-mark,
+.form__goal-control-input:disabled ~ .form__goal-control-label {
+  opacity: 0.3;
 }
