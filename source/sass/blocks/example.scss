@@ -3,11 +3,11 @@
   background-color: #eaeaea;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 55%, rgba(234, 234, 234, 1) 55%, rgba(234, 234, 234, 1) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 619px, rgba(234, 234, 234, 1) 619px, rgba(234, 234, 234, 1) 768px);
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 23%, rgba(242, 242, 242, 1) 23%, rgba(242, 242, 242, 1) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 136px, rgba(242, 242, 242, 1) 136px, rgba(242, 242, 242, 1) 598px);
   }
 }
 

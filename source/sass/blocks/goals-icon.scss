@@ -1,0 +1,7 @@
+.goals-icon {
+  margin-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 25px;
+  }
+}

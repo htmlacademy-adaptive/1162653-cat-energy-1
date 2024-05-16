@@ -5,6 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт Энерджи</title>
+  <link rel="preload" href="/fonts/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preconnect" href="https://maps.googleapis.com">
+  <link rel="preconnect" href="https://maps.gstatic.com">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -107,7 +112,7 @@
             <p class="advantages__number">3</p>
           </li>
           <li class="advantages__item advantages__item--clock">
-            <p class="advantages__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="advantages__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
             <p class="advantages__number">4</p>
           </li>
         </ul>
@@ -119,7 +124,7 @@
         <div class="example__text-container">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__about">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+          Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
           часов в день.</p>
           <div class="example__results">
         <dl class="example__list">
@@ -142,7 +147,7 @@
             <source type="image/webp" srcset="img/boris-before-mobile.webp 1x, img/boris-before-mobile@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/boris-before-tablet.png 1x, img/boris-before-tablet@2x.png 2x">
             <img class="slider__picture" src="img/boris-before-mobile.png" srcset="img/boris-before-mobile@2x.png 2x" width="280" height="256"
-            alt="Кот Борис до функционального питания.">
+            alt="Кот Борис до функционального питания." loading="lazy">
           </picture>
         </div>
         <div class="slider__wrapper slider__wrapper--after">
@@ -151,10 +156,15 @@
             <source type="image/webp" srcset="img/boris-after-mobile.webp 1x, img/boris-after-mobile@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/boris-after-tablet.png 1x, img/boris-after-tablet@2x.png 2x">
             <img class="slider__picture" src="img/boris-after-mobile.png" srcset="img/boris-after-mobile@2x.png 2x" width="280" height="256"
-            alt="Кот Борис после функционального питания.">
+            alt="Кот Борис после функционального питания." loading="lazy">
           </picture>
         </div>
-        <button class="slider__toggle" style="left: 50%" type="button"><span class="visually-hidden">Смотреть до и после</span></button>
+        <button class="slider__toggle" style="left: 50%" type="button">
+          <span class="visually-hidden">Смотреть до и после</span>
+          <svg class="slider__toggle-icon" width="40" height="40">
+            <use xlink:href="img/sprite.svg#slider-thumb"></use>
+          </svg>
+        </button>
       </div>
     </div>
     </section>
@@ -180,7 +190,7 @@
             <source type="image/webp" srcset="img/location-mobile.webp 1x, img/location-mobile@2x.webp 2x">
             <source media="(min-width: 1300px)" srcset="img/location-desktop.png 1x, img/location-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/location-tablet.png 1x, img/location-tablet@2x.png 2x">
-            <img class="contacts__picture" src="img/location-mobile.png" srcset="img/location-mobile@2x.png 2x" width="320" height="362" alt="Карта расположения офиса Cat Energy.">
+            <img class="contacts__picture" src="img/location-mobile.png" srcset="img/location-mobile@2x.png 2x" width="320" height="362" alt="Карта расположения офиса Cat Energy." loading="lazy">
           </picture>
         </div>
       </div>
@@ -191,8 +201,10 @@
     <div class="main-footer__wrapper page-container">
     <!-- Подвал сайта -->
       <a class="main-footer__logo" href="index.html">
-        <img class="main-footer__logo-text" src="img/text-logo.svg" width="128" height="24"
-          alt="Логотип Cat Energy.">
+        <span class="visually-hidden">Cat Energy</span>
+          <svg class="main-footer__logo-text" width="128" height="24">
+            <use xlink:href="img/sprite.svg#text-logo"></use>
+          </svg>
       </a>
       <div class="main-footer__social social">
         <ul class="social__list">
@@ -227,8 +239,9 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__logo" src="img/html-logo-text.svg" width="113" height="20"
             alt="Текстовый логотип HTML Academy.">
-          <img class="copyright__logo" src="img/html-logo-image.svg" width="27" height="34"
-            alt="Логотип HTML Academy.">
+            <svg class="copyright__icon" width="27" height="34">
+              <use xlink:href="img/sprite.svg#html-logo-image"></use>
+            </svg>
         </a>
       </div>
     </div>
