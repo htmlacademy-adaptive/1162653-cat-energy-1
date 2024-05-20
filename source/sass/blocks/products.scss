@@ -254,6 +254,7 @@
 .products__item--more .products__heading {
   width: 204px;
   margin-bottom: 8px;
+  color: $font-color-detailed;
 
   @media (min-width: $tablet-width) {
     width: 134px;

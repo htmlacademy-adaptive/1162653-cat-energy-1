@@ -51,12 +51,13 @@
   }
 
   &:active {
-    background-color: $background-branded;
+    background-color: #5eaa2f;
     opacity: 0.6;
   }
 
-  &:focus {
+  &:focus-visible {
     background-color: $font-color-detailed;
+    outline: none;
   }
 }
 
@@ -81,10 +82,11 @@
 }
 
 .slider__toggle:active .slider__toggle-icon {
-  color: $background-branded;
+  color: #5eaa2f;
   opacity: 0.6;
 }
 
-.slider__toggle:focus .slider__toggle-icon {
+.slider__toggle:focus-visible .slider__toggle-icon {
   color: $font-color-detailed;
+  outline: none;
 }
