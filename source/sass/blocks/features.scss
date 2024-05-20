@@ -96,6 +96,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 52px;
+    max-width: 410px;
   }
 }
 
@@ -130,12 +131,14 @@
 .features__to-form {
   padding: 10px 64px;
   margin: 138px auto 0;
+  max-width: 280px;
 
   @media (min-width: $tablet-width) {
     padding: 14px 28px;
     margin: 0;
     font-size: 20px;
     line-height: 26px;
+    max-width: 410px;
   }
 
   @media (min-width: $desktop-width) {

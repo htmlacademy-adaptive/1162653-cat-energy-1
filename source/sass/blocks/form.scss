@@ -44,12 +44,8 @@
   grid-template-columns: auto;
   gap: 14px;
   margin-bottom: 24px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 35px;
-    padding-right: 35px;
     gap: 20px;
     margin-bottom: 72px;
   }
@@ -57,7 +53,6 @@
   @media (min-width: $desktop-width) {
     width: 570px;
     margin: 0;
-    padding: 0;
   }
 
   &::after {
@@ -76,11 +71,19 @@
 
 .form__about-group {
   margin: 0;
-  padding: 0;
   display: flex;
-  flex-wrap: wrap;
   gap: 13px;
   align-items: center;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .form__about-label {
@@ -244,13 +247,13 @@
   gap: 13px;
 
   &--email {
-    position: relative;
     padding-top: 5px;
 
     &::after {
       position: absolute;
       content: "";
       display: block;
+      bottom: 12px;
       right: 32px;
       width: 20px;
       height: 20px;
@@ -261,6 +264,7 @@
 
       @media (min-width: $tablet-width) {
         right: 14px;
+        bottom: 15px;
       }
 
       @media (min-width: $desktop-width) {
@@ -280,6 +284,7 @@
       position: absolute;
       content: "";
       display: block;
+      bottom: 12px;
       right: 32px;
       width: 20px;
       height: 20px;
@@ -290,6 +295,7 @@
 
       @media (min-width: $tablet-width) {
         right: 14px;
+        bottom: 15px;
       }
 
       @media (min-width: $desktop-width) {
@@ -358,6 +364,7 @@
 
 .form__contacts-input {
   flex: 1;
+  padding-right: 35px;
 }
 
 .form__comment {

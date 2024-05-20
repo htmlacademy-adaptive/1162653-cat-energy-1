@@ -190,7 +190,7 @@
 }
 
 .supplements__heading {
-  color: $font-color-base;
+  color: #222222;
   font-family: $font-family-secondary;
   font-size: 16px;
   font-weight: 400;
@@ -245,6 +245,11 @@
 
 .supplements__option-price {
   margin: 0;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    min-width: 42px;
+  }
 }
 
 .supplements__order {
